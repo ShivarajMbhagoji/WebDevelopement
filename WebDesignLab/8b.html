@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Validation</title>
+</head>
+<body>
+    <h1>Email Validation</h1>
+    <p id="output"></p>
+
+    <script>
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+        const userEnteredEmail = prompt("Enter an email address:"); // Prompt the user for input
+
+        const isValidEmail = emailPattern.test(userEnteredEmail);
+
+        const outputElement = document.getElementById('output');
+        outputElement.innerHTML = `Is "${userEnteredEmail}" a valid email address? ${isValidEmail}`;
+    </script>
+</body>
+</html>
